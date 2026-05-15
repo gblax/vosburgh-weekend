@@ -1,17 +1,21 @@
 export function TripHeader() {
   return (
     <header className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-harbor-700 via-harbor-600 to-palmetto-600" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-harbor-900 via-harbor-800 to-palmetto-800" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/5 to-transparent" />
       <Palmettos />
-      <div className="mx-auto flex max-w-3xl flex-col items-start px-4 pb-6 pt-10 text-cream-50 sm:pb-8 sm:pt-14">
-        <span className="rounded-full bg-cream-50/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-cream-50/90">
+      <div className="relative mx-auto flex max-w-3xl flex-col items-start px-4 pb-6 pt-10 text-white sm:pb-8 sm:pt-14">
+        <span className="rounded-full bg-white/20 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-white ring-1 ring-inset ring-white/25 backdrop-blur-sm">
           Vosburgh family weekend
         </span>
-        <h1 className="mt-3 font-serif text-3xl font-semibold leading-tight sm:text-5xl">
+        <h1
+          className="mt-3 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl"
+          style={{ textShadow: "0 2px 16px rgba(10, 35, 50, 0.6)" }}
+        >
           Charleston,
           <br className="sm:hidden" /> South Carolina
         </h1>
-        <p className="mt-2 text-sm text-cream-50/90 sm:text-base">
+        <p className="mt-2 text-sm font-medium text-white sm:text-base">
           Thursday, May 21 — Monday, May 25, 2026
         </p>
       </div>
