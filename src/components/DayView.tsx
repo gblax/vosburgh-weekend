@@ -147,7 +147,12 @@ export function DayView({ day, initialEvents }: DayViewProps) {
   }
 
   return (
-    <div className="pb-24">
+    <div
+      style={{
+        paddingBottom:
+          "calc(6rem + env(safe-area-inset-bottom))",
+      }}
+    >
       <header className="mx-auto max-w-3xl px-4 pb-4 pt-6">
         <div className="flex items-end justify-between gap-3">
           <div>
@@ -184,7 +189,11 @@ export function DayView({ day, initialEvents }: DayViewProps) {
       <button
         type="button"
         onClick={openCreate}
-        className="fixed bottom-6 right-6 z-20 inline-flex items-center gap-2 rounded-full bg-peach-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-peach-500/30 hover:bg-peach-600 active:translate-y-px"
+        className="fixed right-5 z-20 inline-flex items-center gap-2 rounded-full bg-peach-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-peach-500/30 hover:bg-peach-600 active:translate-y-px"
+        style={{
+          bottom:
+            "max(1.25rem, calc(1.25rem + env(safe-area-inset-bottom)))",
+        }}
       >
         <Plus className="h-4 w-4" />
         Add event
