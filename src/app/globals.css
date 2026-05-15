@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: theme("colors.cream.50");
+    color: theme("colors.harbor.900");
+  }
+
+  body {
+    background-image: radial-gradient(
+        ellipse at top right,
+        rgba(46, 138, 87, 0.05),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        rgba(56, 132, 167, 0.05),
+        transparent 55%
+      );
+    background-attachment: fixed;
+    min-height: 100dvh;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full rounded-lg border border-harbor-200 bg-white px-3 py-2 text-sm text-harbor-900 shadow-sm transition-colors placeholder:text-harbor-700/40 focus:border-harbor-500 focus:outline-none focus:ring-2 focus:ring-harbor-300;
+  }
+}
