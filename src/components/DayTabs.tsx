@@ -9,7 +9,10 @@ export function DayTabs() {
   const active = pathname.split("/")[1] || "home";
 
   return (
-    <nav className="sticky top-0 z-30 border-b border-harbor-100 bg-cream-50/90 backdrop-blur supports-[backdrop-filter]:bg-cream-50/75">
+    <nav
+      className="sticky top-0 z-30 border-b border-harbor-100 bg-cream-50/90 backdrop-blur supports-[backdrop-filter]:bg-cream-50/75"
+      style={{ paddingTop: "env(safe-area-inset-top)" }}
+    >
       <div className="mx-auto max-w-3xl px-3">
         <ul className="flex items-stretch justify-between gap-1 py-2 sm:gap-2">
           <li className="flex">
