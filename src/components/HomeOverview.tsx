@@ -209,10 +209,6 @@ function StatusBanner({
           Countdown
         </span>
         <p className="mt-2 font-serif text-2xl text-harbor-900">{label}</p>
-        <p className="mt-1 text-sm text-harbor-700/85">
-          Build out the itinerary below. The arrival flight is already on
-          Thursday.
-        </p>
       </div>
     );
   }
