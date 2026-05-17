@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { X, Trash2 } from "lucide-react";
 import type { EventCategory, EventDay, ItineraryEvent } from "@/types/event";
 import { CATEGORIES, CATEGORY_VALUES } from "@/lib/categories";
+import { PhotoField } from "./PhotoField";
 
 export type EventDraft = {
   day: EventDay;
@@ -225,32 +226,25 @@ export function EventDialog({
               />
             </Field>
 
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <Field label="Link URL">
-                <input
-                  type="url"
-                  value={draft.link_url}
-                  onChange={(e) =>
-                    setDraft({ ...draft, link_url: e.target.value })
-                  }
-                  className="input"
-                  placeholder="https://…"
-                  inputMode="url"
-                />
-              </Field>
-              <Field label="Photo URL">
-                <input
-                  type="url"
-                  value={draft.photo_url}
-                  onChange={(e) =>
-                    setDraft({ ...draft, photo_url: e.target.value })
-                  }
-                  className="input"
-                  placeholder="https://…"
-                  inputMode="url"
-                />
-              </Field>
-            </div>
+            <Field label="Photo">
+              <PhotoField
+                value={draft.photo_url}
+                onChange={(url) => setDraft({ ...draft, photo_url: url })}
+              />
+            </Field>
+
+            <Field label="Link" hint="Restaurant menu, reservation, etc.">
+              <input
+                type="url"
+                value={draft.link_url}
+                onChange={(e) =>
+                  setDraft({ ...draft, link_url: e.target.value })
+                }
+                className="input"
+                placeholder="https://…"
+                inputMode="url"
+              />
+            </Field>
           </div>
 
           <footer
